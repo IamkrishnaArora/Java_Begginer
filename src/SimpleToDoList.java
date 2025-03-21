@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.Scanner;
 
 public class SimpleToDoList {
@@ -8,11 +9,13 @@ public class SimpleToDoList {
         Scanner scanner = new Scanner(System.in);
 
         // Create an ArrayList to store tasks
-        ArrayList<String> toDoList = new ArrayList<>();
 
+        //Array vs ArrayList
+        //Fixed vs unfixed
+
+        ArrayList<String> toDoList = new ArrayList<>();
         // Displaying the welcome message
         System.out.println("Welcome to the Simple To-Do List Application!");
-
         // Main loop for the menu
         while (true) {
             // Display the menu options
@@ -39,7 +42,7 @@ public class SimpleToDoList {
                     // Remove Task
                     System.out.println("Here are your tasks:");
                     for (int i = 0; i < toDoList.size(); i++) {
-                        System.out.println((i + 1) + ". " + toDoList.get(i));
+                        System.out.println((i + 1) + " . " + toDoList.get(i));
                     }
                     System.out.print("Enter the task number you want to remove: ");
                     int taskNumber = scanner.nextInt();
@@ -58,7 +61,7 @@ public class SimpleToDoList {
                     } else {
                         System.out.println("Here are your current tasks:");
                         for (int i = 0; i < toDoList.size(); i++) {
-                            System.out.println((i + 1) + ". " + toDoList.get(i));
+                            System.out.println((i + 1) + " . " + toDoList.get(i));
                         }
                     }
                     break;
